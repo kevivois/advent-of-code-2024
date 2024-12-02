@@ -26,15 +26,6 @@ for line in data:
     is_line_valid = is_valid(splitted)
     if is_line_valid:
         count+=1
-    else:
-        for i in range(0,len(splitted)):
-            new_arr = splitted.copy()
-            new_arr.pop(i)
-            is_line_valid = is_valid(new_arr)
-            if is_line_valid:
-                count+=1
-                break
-    if is_line_valid:
         print("Safe")
     else:
         print("Unsafe")
